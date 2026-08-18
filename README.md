@@ -1,356 +1,252 @@
-#Unidad 1 · Fundamentos de Programación Extrema
+# Unidad 1 · Fundamentos de Programación Extrema
 
-Programación Extrema y Desarrollo Guiado por Pruebas
-Resumen teórico basado en los materiales propuestos por la cátedra.
+> **Programación Extrema y Desarrollo Guiado por Pruebas**  
+> Resumen teórico basado en los materiales propuestos por la cátedra.
 
-📌 ¿Qué vamos a trabajar?
+---
 
-La Unidad 1 introduce los fundamentos de la agilidad y de Extreme Programming (XP).
+## 📌 ¿Qué vamos a trabajar?
+
+La Unidad 1 introduce los fundamentos de la **agilidad** y de **Extreme Programming (XP)**.
 
 El objetivo principal es comprender cómo puede organizarse el desarrollo de software cuando existen:
 
-requisitos cambiantes;
-incertidumbre;
-necesidad de entregar valor rápidamente;
-problemas de comunicación;
-errores que deben detectarse temprano;
-necesidad de mantener calidad durante todo el desarrollo.
+- requisitos cambiantes;
+- incertidumbre;
+- necesidad de entregar valor rápidamente;
+- problemas de comunicación;
+- errores que deben detectarse temprano;
+- necesidad de mantener la calidad durante todo el desarrollo.
 
-La idea central no es simplemente programar más rápido, sino desarrollar de una manera que permita aprender, recibir feedback y adaptarse continuamente.
+> La idea central no es simplemente **programar más rápido**, sino desarrollar de una manera que permita **aprender, recibir feedback y adaptarse continuamente**.
 
-1. Manifiesto por el Desarrollo Ágil de Software
+---
 
-El Manifiesto Ágil establece cuatro grandes prioridades para el desarrollo de software.
+## 1. Manifiesto por el Desarrollo Ágil de Software
 
-Se valoran:
+El **Manifiesto Ágil** establece cuatro grandes prioridades para el desarrollo de software.
 
-Se prioriza	Por encima de
-👥 Individuos e interacciones	Procesos y herramientas
-💻 Software funcionando	Documentación extensiva
-🤝 Colaboración con el cliente	Negociación contractual
-🔄 Respuesta ante el cambio	Seguimiento de un plan
+| Se valora más | Por encima de |
+|---|---|
+| 👥 **Individuos e interacciones** | Procesos y herramientas |
+| 💻 **Software funcionando** | Documentación extensiva |
+| 🤝 **Colaboración con el cliente** | Negociación contractual |
+| 🔄 **Respuesta ante el cambio** | Seguimiento de un plan |
 
-Esto no significa que los elementos de la columna derecha no sean importantes.
+Esto **no significa que los elementos de la columna derecha carezcan de valor**. El Manifiesto plantea que también son importantes, pero que se valora más lo indicado a la izquierda.
 
-El Manifiesto establece que también tienen valor, pero que los elementos de la izquierda deben recibir mayor prioridad cuando sea necesario tomar decisiones.
+### Ejemplo
 
-Por ejemplo:
+Tener un plan es útil, pero si las necesidades reales del cliente cambian, seguirlo de manera rígida puede producir un software que ya no resuelva el problema correcto.
 
-Tener un plan es útil, pero si las necesidades reales del cliente cambian, seguir el plan de manera rígida puede producir un software que ya no resuelva el problema correcto.
+La agilidad propone trabajar de manera **adaptativa**, utilizando información obtenida durante el desarrollo para revisar las decisiones tomadas.
 
-La agilidad propone entonces trabajar de manera adaptativa, utilizando información real obtenida durante el desarrollo.
+---
 
-2. Los principios ágiles
+## 2. Los principios ágiles
 
-Los doce principios del Manifiesto amplían estos valores y muestran cómo llevarlos al trabajo cotidiano.
+Los **doce principios del Manifiesto Ágil** amplían sus cuatro valores y muestran cómo llevarlos al trabajo cotidiano.
 
-🎯 Entregar valor temprano
+### 🎯 Satisfacer al cliente mediante entregas tempranas y continuas
 
-La prioridad es satisfacer al cliente mediante entregas tempranas y continuas de software que realmente aporte valor.
+La prioridad es entregar software que aporte valor desde etapas tempranas del proyecto.
 
-En lugar de esperar meses para presentar el producto terminado, se busca generar incrementos funcionales pequeños.
+### 🔄 Aceptar cambios
 
-🔄 Aceptar cambios
+Los requisitos pueden cambiar incluso en etapas avanzadas. Los procesos ágiles aprovechan esos cambios para mejorar el producto y mantener su valor para el cliente.
 
-Los requisitos pueden cambiar incluso cuando el desarrollo ya está avanzado.
+### 🚀 Entregar software frecuentemente
 
-Los métodos ágiles buscan aprovechar esos cambios para mejorar el producto, en lugar de intentar evitarlos a toda costa.
+Las entregas frecuentes permiten obtener información real sobre el producto y detectar antes errores, necesidades nuevas o requisitos mal interpretados.
 
-🚀 Entregar software frecuentemente
+### 🤝 Trabajo conjunto
 
-Las entregas frecuentes permiten obtener información real sobre el producto.
+Las personas responsables del negocio y quienes desarrollan el software deben trabajar juntas de forma cotidiana durante el proyecto.
 
-Cuanto antes se muestra algo funcionando, antes pueden detectarse:
+### 🧠 Equipos motivados
 
-errores;
-necesidades nuevas;
-requisitos mal interpretados;
-oportunidades de mejora.
-🤝 Trabajo conjunto
+Los proyectos deben construirse alrededor de personas motivadas, brindándoles el entorno, el apoyo y la confianza necesarios para realizar el trabajo.
 
-Las personas responsables del negocio y quienes desarrollan el software deben colaborar frecuentemente durante el proyecto.
+### 🗣️ Comunicación directa
 
-Esto reduce interpretaciones incorrectas y permite tomar decisiones con más información.
+La conversación directa es una de las formas más eficientes de transmitir información dentro de un equipo de desarrollo.
 
-🧠 Equipos motivados
+### 💻 Software funcionando como medida de progreso
 
-Los proyectos deben construirse alrededor de personas capaces y motivadas.
+La principal medida de avance es disponer de **software funcionando**.
 
-El equipo necesita:
+### ⚖️ Ritmo sostenible
 
-confianza;
-autonomía;
-herramientas adecuadas;
-un entorno apropiado para trabajar.
-🗣️ Comunicación efectiva
+El desarrollo debe poder sostener un ritmo constante de manera indefinida, evitando depender permanentemente de sobrecarga o urgencias.
 
-La comunicación directa favorece el intercambio rápido de información y disminuye pérdidas o interpretaciones incorrectas.
+### 🛠️ Excelencia técnica y buen diseño
 
-💻 Software funcionando como medida de progreso
+La atención continua a la excelencia técnica y al buen diseño mejora la capacidad de adaptación.
 
-Un proyecto no debería considerarse avanzado solamente porque existen documentos, diagramas o muchas horas de trabajo invertidas.
+### ✂️ Simplicidad
 
-La principal evidencia de progreso es disponer de software funcionando.
+La simplicidad implica maximizar la cantidad de trabajo que **no es necesario realizar**.
 
-⚖️ Ritmo sostenible
+### 👥 Equipos autoorganizados
 
-El trabajo debe poder mantenerse durante períodos prolongados.
+Las mejores arquitecturas, requisitos y diseños emergen de equipos capaces de organizar su propio trabajo.
 
-Agilidad no significa trabajar permanentemente bajo presión ni acelerar hasta quemar al equipo.
+### 🔍 Mejora continua
 
-🛠️ Excelencia técnica
+A intervalos regulares, el equipo reflexiona sobre cómo ser más efectivo y ajusta su comportamiento en consecuencia.
 
-Un buen diseño y una buena calidad técnica facilitan futuros cambios.
+---
 
-Un sistema difícil de modificar limita la capacidad del equipo para responder rápidamente.
+## 3. Extreme Programming (XP)
 
-✂️ Simplicidad
-
-La simplicidad consiste en evitar trabajo innecesario.
-
-No se busca construir hoy soluciones para problemas hipotéticos que quizá nunca aparezcan.
-
-👥 Equipos autoorganizados
-
-Las mejores soluciones suelen surgir cuando los equipos pueden organizar su propio trabajo y tomar decisiones sobre cómo resolver los problemas.
-
-🔍 Mejora continua
-
-Los equipos deben detenerse periódicamente para analizar:
-
-qué está funcionando;
-qué no;
-qué debería cambiar.
-
-Luego ajustan su forma de trabajo.
-
-3. Extreme Programming
-
-Extreme Programming, conocida como XP, es una forma de desarrollo ágil orientada especialmente a contextos donde existe cambio frecuente.
+**Extreme Programming**, conocida como **XP**, es un enfoque ágil de desarrollo de software especialmente orientado a contextos donde existe incertidumbre, cambio frecuente y necesidad de feedback continuo.
 
 XP busca mejorar la capacidad del equipo para:
 
-adaptarse;
-comunicarse;
-entregar valor;
-detectar errores temprano;
-mejorar continuamente el software.
+- adaptarse;
+- comunicarse;
+- entregar valor;
+- detectar problemas temprano;
+- mejorar continuamente el software.
 
-Una de sus ideas centrales puede resumirse así:
+Una forma simple de representar su estructura es:
 
-Valores → Principios → Prácticas
+```text
+VALORES
+   ↓
+PRINCIPIOS
+   ↓
+PRÁCTICAS
+```
 
-Los valores representan aquello que el equipo considera importante.
+Los **valores** expresan aquello que el equipo considera importante.  
+Los **principios** sirven como guía para tomar decisiones.  
+Las **prácticas** convierten esas ideas en acciones concretas y observables.
 
-Los principios ayudan a transformar esos valores en criterios para tomar decisiones.
+XP no funciona como una colección de técnicas aisladas. Sus prácticas adquieren sentido cuando están relacionadas con sus valores y principios.
 
-Las prácticas convierten esas ideas en comportamientos concretos dentro del desarrollo.
+---
 
-El artículo propuesto por la cátedra destaca precisamente que las prácticas pierden sentido si no están respaldadas por valores.
+## 4. Los cinco valores de XP
 
-4. Los cinco valores principales de XP
-🗣️ Comunicación
+### 🗣️ Comunicación
 
-Gran parte de los problemas de un equipo no aparecen únicamente por falta de conocimientos técnicos, sino por falta de comunicación.
+El desarrollo de software requiere intercambio constante de información. Una buena comunicación permite compartir conocimiento, resolver problemas y evitar que partes importantes del sistema dependan exclusivamente de una persona.
 
-Compartir información permite:
+### 🧩 Simplicidad
 
-resolver problemas más rápido;
-distribuir conocimiento;
-evitar dependencias excesivas de una sola persona;
-mejorar la colaboración.
-🧩 Simplicidad
+XP propone buscar la solución más simple que responda a las necesidades actuales, evitando complejidad innecesaria.
 
-XP propone implementar la solución más simple que satisfaga las necesidades actuales.
+Un diseño simple suele ser más fácil de:
 
-No significa escribir software descuidado.
+- comprender;
+- probar;
+- mantener;
+- modificar.
 
-Significa evitar complejidad innecesaria.
+### 🔄 Feedback
 
-Un diseño simple suele ser:
+El feedback permite conocer rápidamente si una decisión está funcionando.
 
-más fácil de comprender;
-más fácil de probar;
-más fácil de mantener;
-más fácil de modificar.
-🔄 Feedback
+Puede provenir de:
 
-El feedback es uno de los elementos centrales de XP.
-
-Permite observar rápidamente si una decisión está funcionando.
-
-El feedback puede provenir de:
-
-pruebas;
-otros integrantes del equipo;
-usuarios;
-clientes;
-funcionamiento real del producto.
+- pruebas;
+- otros integrantes del equipo;
+- clientes;
+- usuarios;
+- el funcionamiento del propio producto.
 
 Cuanto más corto sea el ciclo de feedback, antes puede corregirse el rumbo.
 
-🦁 Coraje
+### 🦁 Coraje
 
-Modificar una decisión existente, reconocer un error o cambiar una solución requiere coraje.
+El coraje implica estar dispuesto a modificar código, reconocer errores o cambiar una decisión cuando aparece nueva información.
 
-Pero el coraje en XP no significa actuar sin medir consecuencias.
+No significa actuar de manera imprudente. Las pruebas, la colaboración y el feedback permiten realizar cambios con mayor seguridad.
 
-Las pruebas, la colaboración y el feedback permiten realizar cambios con mayor seguridad.
+### 🤝 Respeto
 
-🤝 Respeto
+Los integrantes del equipo deben respetar el trabajo, las opiniones y las responsabilidades de los demás. El respeto sostiene la colaboración y la responsabilidad compartida sobre el producto.
 
-XP considera fundamental el respeto entre las personas que forman parte del equipo.
+---
 
-Esto incluye respetar:
-
-el trabajo de los demás;
-las diferentes opiniones;
-las decisiones compartidas;
-el código;
-las responsabilidades del equipo.
-
-Sin respeto, las prácticas colaborativas pierden efectividad.
-
-5. Principios de XP
+## 5. Principios de XP
 
 Los principios funcionan como un puente entre los valores generales y las prácticas concretas.
 
-Entre los principios destacados se encuentran:
+Entre los principios desarrollados por XP se encuentran:
 
-Humanidad
+- **Humanidad:** el software es desarrollado por personas y el proceso debe considerar sus necesidades.
+- **Economía:** las decisiones técnicas también deben considerar el valor que generan.
+- **Beneficio mutuo:** una práctica debería aportar beneficios en el presente y también favorecer el trabajo futuro.
+- **Mejora:** no se busca alcanzar inmediatamente una solución perfecta, sino mejorar de manera continua.
+- **Diversidad:** diferentes conocimientos y perspectivas pueden producir mejores soluciones.
+- **Reflexión:** el equipo analiza cómo está trabajando y aprende de la experiencia.
+- **Flujo:** se busca producir valor continuamente en lugar de depender de grandes entregas aisladas.
+- **Oportunidad:** los problemas pueden utilizarse como oportunidades para aprender y mejorar.
+- **Calidad:** reducir la calidad no garantiza avanzar más rápido; una buena calidad facilita futuros cambios.
+- **Pasos pequeños:** los cambios pequeños reducen riesgo y permiten obtener feedback rápidamente.
 
-El software es desarrollado por personas.
+---
 
-Las necesidades del negocio deben equilibrarse con las necesidades humanas de quienes participan en el proyecto.
-
-Economía
-
-Las decisiones técnicas también deben tener en cuenta el valor que generan para el negocio.
-
-Beneficio mutuo
-
-Las soluciones deberían generar beneficios tanto en el presente como en el futuro para desarrolladores, equipo y cliente.
-
-Mejora
-
-XP no persigue alcanzar inmediatamente una solución perfecta.
-
-Busca mejorar continuamente.
-
-Diversidad
-
-Diferentes conocimientos, experiencias y perspectivas permiten encontrar mejores soluciones.
-
-Reflexión
-
-El equipo analiza cómo está trabajando y ajusta sus procesos cuando encuentra oportunidades de mejora.
-
-Flujo
-
-Se busca generar valor continuamente en lugar de realizar enormes entregas separadas por largos períodos.
-
-Oportunidad
-
-Los problemas también pueden utilizarse como oportunidades para aprender y mejorar.
-
-Calidad
-
-Reducir la calidad no garantiza desarrollar más rápido.
-
-En muchos casos, una mejor calidad técnica facilita futuras entregas.
-
-Pasos pequeños
-
-Los cambios pequeños reducen riesgo y permiten corregir la dirección rápidamente.
-
-6. Algunas prácticas de XP
+## 6. Algunas prácticas de XP
 
 Los valores y principios se vuelven visibles mediante prácticas concretas.
 
-👨‍💻👩‍💻 Pair Programming
+### 👨‍💻👩‍💻 Pair Programming
 
-Dos personas trabajan juntas sobre una misma tarea.
+Dos personas trabajan juntas sobre una misma tarea, compartiendo revisión, conocimiento y decisiones.
 
-Esto puede mejorar:
+Favorece especialmente la **comunicación** y el **feedback**.
 
-comunicación;
-revisión constante;
-transferencia de conocimiento;
-diseño;
-feedback.
+### 📖 Historias
 
-La programación en pareja refleja especialmente los valores de comunicación y feedback.
+Las historias permiten expresar necesidades desde una perspectiva comprensible para el cliente y el equipo de desarrollo, y sirven como punto de partida para conversar sobre el valor esperado.
 
-📖 Historias
+### 🔄 Integración continua
 
-Las historias permiten describir necesidades desde una perspectiva comprensible para usuarios y desarrolladores.
+Los cambios se integran con frecuencia para detectar problemas temprano y evitar grandes conflictos de integración.
 
-Sirven como punto inicial para conversar sobre qué valor debe entregar el producto.
+### 🧪 Test-First Programming
 
-🔄 Integración continua
+Las pruebas se escriben antes de implementar determinado comportamiento. Esto permite obtener feedback temprano y ayuda a guiar el diseño.
 
-Los cambios se integran frecuentemente y se verifican mediante procesos automatizados.
+Esta práctica se relaciona directamente con los contenidos de **TDD** que se desarrollarán en unidades posteriores.
 
-Esto ayuda a detectar errores temprano y reducir grandes conflictos de integración.
+### 🧱 Diseño incremental
 
-🧪 Test-First Programming
+El diseño evoluciona junto con el software. Se parte de una solución suficiente para las necesidades actuales y se mejora cuando aparece nueva información.
 
-Se escriben pruebas antes de implementar determinado comportamiento.
+### 🔧 Código compartido
 
-Esto permite obtener feedback temprano y ayuda a pensar el diseño antes de completar la solución.
+El código pertenece al equipo. La responsabilidad y el conocimiento no deberían quedar concentrados en una sola persona.
 
-Esta práctica será especialmente importante más adelante al estudiar TDD.
+---
 
-🧱 Diseño incremental
+## 7. XP no significa improvisar
 
-El diseño no se considera algo completamente terminado antes de comenzar a programar.
+Uno de los errores más comunes es interpretar agilidad como ausencia de organización.
 
-Se parte de una solución suficiente para las necesidades actuales y se evoluciona a medida que aparece nueva información.
+XP **no significa**:
 
-🔧 Código compartido
+- ❌ trabajar sin planificación;
+- ❌ eliminar toda documentación;
+- ❌ desarrollar sin diseño;
+- ❌ aceptar cualquier cambio sin analizarlo;
+- ❌ programar rápido sin medir consecuencias.
 
-El código pertenece al equipo.
+La planificación existe, pero se revisa frecuentemente.  
+La documentación existe cuando resulta útil.  
+El diseño existe, pero evoluciona.  
+El cambio se acepta, pero se gestiona mediante ciclos breves de feedback.
 
-No debería existir una única persona autorizada o capaz de modificar determinada parte del sistema.
+---
 
-La responsabilidad es compartida.
+## 8. Una forma simple de entender XP
 
-7. XP no significa improvisar
+Podemos representar el ciclo de adaptación de esta manera:
 
-Uno de los errores más comunes consiste en interpretar agilidad como ausencia de organización.
-
-XP no significa:
-
-❌ trabajar sin planificación;
-❌ eliminar toda documentación;
-❌ desarrollar sin diseño;
-❌ cambiar requisitos sin analizarlos;
-❌ programar rápido sin pensar.
-
-La planificación existe, pero puede revisarse frecuentemente.
-
-La documentación existe cuando resulta útil.
-
-El diseño existe, pero evoluciona junto con el software.
-
-El cambio se acepta, pero se gestiona utilizando feedback y decisiones pequeñas.
-
-8. Una forma simple de entender XP
-
-Podemos imaginar el desarrollo como conducir un vehículo.
-
-No alcanza con apuntar hacia el destino una sola vez.
-
-Durante todo el recorrido necesitamos:
-
-observar;
-recibir información;
-realizar pequeñas correcciones;
-comprobar nuevamente;
-continuar.
-
-XP utiliza esta misma lógica.
-
+```text
 Desarrollar
     ↓
 Obtener feedback
@@ -360,12 +256,15 @@ Aprender
 Corregir
     ↓
 Volver a desarrollar
+```
 
-La adaptación no ocurre únicamente cuando algo sale mal.
+La adaptación no ocurre únicamente cuando algo sale mal. Forma parte permanente del proceso.
 
-Forma parte permanente del proceso.
+---
 
-9. Relación entre los conceptos
+## 9. Relación entre los conceptos
+
+```text
 AGILIDAD
    │
    ├── Entrega frecuente
@@ -392,46 +291,59 @@ AGILIDAD
            │
            ▼
         CAMBIO
-10. Conclusión
+```
 
-Extreme Programming propone una forma de desarrollar software basada en adaptación, colaboración y feedback continuo.
+---
 
-La agilidad no consiste en eliminar procesos ni en desarrollar más rápido a cualquier costo.
+## 10. Conclusión
 
-Consiste en reducir la distancia entre:
+Extreme Programming propone una forma de desarrollar software basada en **adaptación, colaboración, calidad y feedback continuo**.
 
-hacer algo → observar qué sucede → aprender → mejorar.
+La agilidad no consiste en eliminar procesos ni en desarrollar más rápido a cualquier costo. Consiste en reducir la distancia entre:
+
+> **hacer algo → observar qué sucede → aprender → mejorar**
 
 XP convierte esta idea en un sistema formado por valores, principios y prácticas.
 
 Sus cinco valores principales son:
 
-Comunicación · Simplicidad · Feedback · Coraje · Respeto
+> **Comunicación · Simplicidad · Feedback · Coraje · Respeto**
 
-Las prácticas concretas permiten que esos valores sean visibles dentro del trabajo diario.
+Las prácticas permiten que esos valores se vuelvan visibles dentro del trabajo diario. Por eso, XP debe entenderse como un sistema coherente de trabajo y no como una colección de técnicas independientes.
 
-Por eso, XP no debe entenderse como una colección de técnicas independientes, sino como una forma coherente de trabajar orientada a mantener la calidad mientras el producto cambia.
+---
 
-📚 Fuentes
+## 📚 Fuentes
 
-Este resumen fue elaborado a partir de los materiales indicados para la Unidad 1 por la cátedra:
+Este resumen fue elaborado a partir de los materiales indicados por la cátedra para la Unidad 1.
 
-Manifiesto Ágil
-Manifiesto por el Desarrollo Ágil de Software
-Agile Manifesto · traducción oficial.
-Principios Ágiles
-Principios del Manifiesto Ágil
-Agile Manifesto · traducción oficial.
-Extreme Programming
-Valores, Principios y Prácticas. Extreme Programming Explained
-Lean Mind.
-Material de ampliación
-Agile Practice Guide
-Agile Alliance / Project Management Institute.
-💡 Idea central
+### Manifiesto Ágil
 
-XP no intenta impedir que el proyecto cambie.
-Intenta que el equipo pueda cambiar sin perder el control.
+- [Manifiesto por el Desarrollo Ágil de Software](https://agilemanifesto.org/iso/es/manifesto.html)  
+  *Agile Manifesto · traducción oficial.*
 
-Unidad 1 · Fundamentos de Programación Extrema
-Tecnicatura en Desarrollo Full Stack Actividad-Programaci-n-Extrema-18-8
+### Principios Ágiles
+
+- [Principios del Manifiesto Ágil](https://agilemanifesto.org/iso/es/principles.html)  
+  *Agile Manifesto · traducción oficial.*
+
+### Extreme Programming
+
+- [Extreme Programming: valores, principios y prácticas](https://leanmind.es/es/blog/extreme-programming-valores-principios-practicas)  
+  *Lean Mind · artículo técnico.*
+
+### Material de ampliación
+
+- **Guía Práctica de Ágil**  
+  *Agile Alliance / Project Management Institute.*
+
+---
+
+## 💡 Idea central
+
+> **XP no intenta impedir que el proyecto cambie. Busca que el equipo pueda responder al cambio manteniendo calidad, aprendizaje y control.**
+
+---
+
+**Unidad 1 · Fundamentos de Programación Extrema**  
+Tecnicatura en Desarrollo Full Stack
