@@ -22,6 +22,26 @@ El objetivo principal es comprender cómo puede organizarse el desarrollo de sof
 
 ---
 
+## 🚨 Caso inicial: un proyecto en problemas
+
+Imaginemos un equipo que desarrolla una aplicación de comercio electrónico.
+
+Durante el proyecto empiezan a aparecer varios problemas:
+
+- los requisitos cambian con frecuencia;
+- los bugs se descubren demasiado tarde;
+- una parte importante del conocimiento está concentrada en pocas personas;
+- las entregas se demoran;
+- el cliente recibe poco software funcionando y, por lo tanto, poco feedback temprano.
+
+La pregunta no es solamente **“¿cómo programamos más rápido?”**, sino:
+
+> **¿Cómo puede trabajar el equipo para responder al cambio, aprender antes y mantener la calidad?**
+
+Desde este tipo de problemas se puede comprender mejor por qué aparecen los enfoques ágiles y, dentro de ellos, **Extreme Programming**.
+
+---
+
 ## 1. Manifiesto por el Desarrollo Ágil de Software
 
 El **Manifiesto Ágil** establece cuatro grandes prioridades para el desarrollo de software.
@@ -240,6 +260,17 @@ La documentación existe cuando resulta útil.
 El diseño existe, pero evoluciona.  
 El cambio se acepta, pero se gestiona mediante ciclos breves de feedback.
 
+### ¿Es XP o no?
+
+| Situación | ¿Es coherente con XP? | Motivo |
+|---|---|---|
+| Programar más rápido pero sin obtener feedback | ❌ No | La velocidad por sí sola no genera aprendizaje ni adaptación. |
+| Tener muchas pruebas pero trabajar sin colaboración | ❌ No | XP no se reduce a pruebas; también requiere comunicación y trabajo de equipo. |
+| Entregar cambios pequeños y validarlos temprano | ✅ Sí | Favorece feedback, aprendizaje y adaptación. |
+| Mejorar el diseño sin cambiar el comportamiento esperado | ✅ Sí | Es coherente con la mejora continua y la calidad técnica. |
+
+Estos ejemplos muestran una idea clave: **aplicar una práctica aislada no alcanza para decir que un equipo está trabajando con XP**.
+
 ---
 
 ## 8. Una forma simple de entender XP
@@ -295,7 +326,7 @@ AGILIDAD
 
 ---
 
-## 10. Conclusión
+## 10. Conclusión: coherencia entre valores, principios y prácticas
 
 Extreme Programming propone una forma de desarrollar software basada en **adaptación, colaboración, calidad y feedback continuo**.
 
@@ -310,6 +341,8 @@ Sus cinco valores principales son:
 > **Comunicación · Simplicidad · Feedback · Coraje · Respeto**
 
 Las prácticas permiten que esos valores se vuelvan visibles dentro del trabajo diario. Por eso, XP debe entenderse como un sistema coherente de trabajo y no como una colección de técnicas independientes.
+
+Una práctica no debería evaluarse solo por llevar la etiqueta “XP”, sino por el **aprendizaje, el feedback y la calidad que produce dentro del sistema de trabajo**.
 
 ---
 
